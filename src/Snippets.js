@@ -32,9 +32,9 @@ const Snippets = {
 
     const script = `(function (w, d, s, l, i) {
       w[l] = w[l] || [];
-      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js", ${JSON.stringify(
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js", "${JSON.stringify(
         events
-      ).slice(1, -1)} });
+      ).slice(1, -1)}" });
       var f = d.getElementsByTagName(s)[0],
         j = d.createElement(s),
         dl = l != "dataLayer" ? "&l=" + l : "";
@@ -46,7 +46,7 @@ const Snippets = {
         f.parentNode.removeChild(j);
         f.parentNode.insertBefore(j2, f);
       };
-      j.src = "${gtm_src}/gtm.js?id=" + i + dl + '${gtm_auth}${gtm_preview}&gtm_cookies_win=x';
+      j.src = "${gtm_src}/gtm.js?id=" + i + dl + "${gtm_auth}${gtm_preview}";
       f.parentNode.insertBefore(j, f);
     })(window, document, "script", "${dataLayerName}", "${id}");`;
 
