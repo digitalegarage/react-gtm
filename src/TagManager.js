@@ -47,9 +47,7 @@ const TagManager = {
       auth,
       preview,
     });
-    if (dataLayer) {
-      document.head.appendChild(gtm.dataScript);
-    }
+    if (dataLayer) document.head.appendChild(gtm.dataScript);
     document.head.insertBefore(gtm.script(), document.head.childNodes[0]);
     document.body.insertBefore(gtm.noScript(), document.body.childNodes[0]);
   },
