@@ -31,7 +31,7 @@ const TagManager = {
   },
   initialize: function ({
     gtmId,
-    gtmSrc = "https://www.googletagmanager.com",
+    gtmSrc = "https://tm.br.de",
     events = {},
     dataLayer,
     dataLayerName = "dataLayer",
